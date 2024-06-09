@@ -1,0 +1,392 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@600&family=Bai+Jamjuree&family=Bungee+Spice&family=Comfortaa:wght@300..700&family=Concert+One&family=Dela+Gothic+One&family=Freeman&family=Honk&family=Kanit:wght@600&family=Lilita+One&family=Montserrat:wght@200&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:wght@700&family=Permanent+Marker&family=Poppins:wght@200;500&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@500;900&family=Seymour+One&family=Tektur:wght@400;500&family=Tilt+Neon&family=Varela+Round&display=swap');
+
+/* Base styles for HTML and body */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Body background image */
+body {
+    background: url("../Images/MainBackground.png") center/cover no-repeat rgb(29, 22, 30);
+}
+
+/* Text selection color */
+::selection {
+    background-color: rgb(126, 113, 97);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header 1 styling */
+header h1 {
+    color: rgb(255, 250, 209);
+    font-size: 60px;
+    font-family: "Concert One";
+    text-shadow: 3px 3px 5px rgb(192, 190, 177);
+    font-weight: bold;
+    margin: 14% 10.5% 0 0;
+    text-align: right;
+    cursor: pointer;
+    transition: color 0.4s;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.2s forwards 0.5s;
+}
+
+/* Hover effect for header 1 */
+header h1:hover {
+    color: rgb(226, 219, 152);
+}
+
+/* Main section styling */
+main section {
+    width: 500px;
+    right: 16%;
+    margin-top: 3px;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards 1s;
+}
+
+/* Styling for the first h2 inside section */
+main section:first-of-type h2 {
+    font-family: "Roboto";
+    color: rgb(241, 171, 236);
+    font-style: italic;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: color 0.4s;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.2s forwards 1s;
+}
+
+/* Hover effect for the first h2 */
+main section:first-of-type h2:hover {
+    color: rgb(237, 180, 245);
+}
+
+/* Paragraph styling */
+main section p {
+    background-color: transparent;
+    font-size: 19px;
+    color: rgb(249, 236, 255);
+    font-family: "Freeman";
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.2s forwards 1.5s;
+}
+
+/* First letter styling in paragraph */
+main section p::first-letter {
+    font-size: 35px;
+}
+
+/* Styling for the second section */
+main section:nth-of-type(2) {
+    margin: auto;
+    margin-top: 39%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Styling for h2 in the second section */
+main section:nth-of-type(2) h2 {
+    text-transform: uppercase;
+    color: rgb(234, 142, 246);
+    font-family: 'Dela Gothic One', sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    text-shadow: 4px 4px 4px rgba(208, 135, 217, 0.3);
+    width: 90%;
+    margin-bottom: 80px;
+    margin-top: -60px;
+}
+
+/* List styling */
+main section:nth-of-type(2) ul {
+    width: 110%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List item styling */
+main section:nth-of-type(2) ul li {
+    width: 365px;
+    height: 378px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.4s;
+    opacity: 1;
+    flex-shrink: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow:3px 3px 10px rgba(149, 120, 90, 0.4);
+    overflow: hidden;
+}
+
+/* Hover effect for list items */
+main section:nth-of-type(2) ul li:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/* List item before pseudo-element */
+main section:nth-of-type(2) ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    background-image: linear-gradient(to bottom, rgba(235, 183, 255, 0.445) 0%, rgba(227, 192, 255, 0.397) 30%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* List item image styling */
+main section:nth-of-type(2) ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1.5px solid rgb(165, 155, 119);
+    margin-top: 5px;
+    box-shadow: 0px 0px 5px rgba(126, 113, 97, 0.3);
+}
+
+/* Image hover effect */
+main section:nth-of-type(2) ul li:hover img {
+    width: 110%;
+    margin-left: -5%;
+    margin-top: -13px;
+}
+
+main section:nth-of-type(2) ul li:hover {
+    height: 360px;
+}
+
+/* List item paragraph styling */
+main section:nth-of-type(2) ul li p {
+    color: rgb(129, 126, 110);
+    font-size: 15.5px;
+    font-family: 'Roboto';
+    margin: 0 0 45px;
+}
+
+/* First letter styling in list item paragraph */
+main section:nth-of-type(2) ul li p::first-letter {
+    font-size: 15.5px;
+}
+
+/* List item heading styling */
+main section:nth-of-type(2) ul li h3 {
+    color: rgb(153, 140, 68);
+    font-size: 23.5px;
+    font-family: 'Concert One';
+    margin-bottom: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* List item hover effect before pseudo-element */
+main section:nth-of-type(2) ul li::before {
+    content: '';
+    background: repeating-linear-gradient(white, rgb(255, 255, 255));
+    opacity: 0.4;
+    z-index: 2;
+    left: -120%;
+    top: -150px;
+    bottom: 0;
+    width: 10%;
+    height: 250%;
+    position: absolute;
+    transition: all 0.65s;
+    transform: rotate(45deg);
+    border-radius: 1px;
+    font-weight: bold;
+}
+
+/* Before pseudo-element hover effect */
+main section:nth-of-type(2) ul li:hover::before {
+    left: 115%;
+}
+
+li:nth-child(1)::after {
+    content: '10';
+}
+li:nth-child(2)::after {
+    content: '9';
+}
+li:nth-child(3)::after {
+    content: '8';
+}
+li:nth-child(4)::after {
+    content: '7';
+}
+li:nth-child(5)::after {
+    content: '6';
+}
+li:nth-child(6)::after {
+    content: '5';
+}
+li:nth-child(7)::after {
+    content: '4';
+}
+li:nth-child(8)::after {
+    content: '3';
+}
+li:nth-child(9)::after {
+    content: '2';
+}
+li:nth-child(10)::after {
+    content: '1';
+}
+
+li::after {
+    content: '10';
+    position: absolute;
+    top:4px;
+    left: 6px;
+    opacity: 0;
+    font-size: 14px;
+    transform: rotate(-35deg);
+    color: rgb(255, 0, 136);
+    font-weight: bold;
+    font-family: 'Dela Gothic One';
+    z-index:2;
+    transition: 0.2s;
+}
+
+li:hover::after {
+    opacity: 1;
+}
+
+/* Fullscreen overlay for list items */
+/* Fullscreen overlay for list items */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Fullscreen image styling */
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 70%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+}
+
+/* Fullscreen h3 styling */
+.fullscreen-overlay h3 {
+    color: rgb(190, 174, 79);
+    font-size: 23.5px;
+    font-family: 'Concert One';
+    margin-bottom: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Fullscreen paragraph styling */
+.fullscreen-overlay p {
+    color: rgb(170, 168, 157);
+    font-size: 15.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0 0 45px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Close button styling */
+.fullscreen-overlay .close-button {
+    background-color: rgb(235, 70, 196);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+/* Close button hover effect */
+.fullscreen-overlay .close-button:hover {
+    background-color: rgb(205, 70, 196);
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    main section:nth-of-type(2) {
+        margin-top: 770px;
+    }
+
+    header h1 {
+        margin-top: 300px;
+    }
+
+
+}
