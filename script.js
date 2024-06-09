@@ -1,4 +1,3 @@
-
 // Function to create the "Explore the Beaches" button
 function createExploreButton() {
     // Create a new button element
@@ -12,7 +11,7 @@ function createExploreButton() {
     button.style.color = "rgb(255, 255, 255)";
     button.style.border = "none";
     button.style.padding = "10px 20px";
-    button.style.fontFamily = 'Roboto'
+    button.style.fontFamily = 'Roboto';
     button.style.fontSize = "15px";
     button.style.cursor = "pointer";
     button.style.borderRadius = "8px";
@@ -29,11 +28,12 @@ function createExploreButton() {
         button.style.boxShadow = '0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)';
     };
 
+    // Add a click event to scroll to the top beaches section
     button.onclick = function() {
-        // Sélectionner l'élément <h2>Top Beaches</h2>
-        var topBeachesHeading = document.querySelector("ul");
+        // Select the <ul> element containing the top beaches
+        var topBeachesHeading = document.querySelector("section:nth-of-type(2) ul");
 
-        // Faire défiler la page jusqu'à l'élément <h2>Top Beaches</h2>
+        // Smoothly scroll to the top beaches section
         topBeachesHeading.scrollIntoView({ behavior: "smooth" });
     };
 
@@ -47,7 +47,9 @@ function createExploreButton() {
 // Call the function to create the button when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", createExploreButton);
 
+// Function to add images to the beach list items and enable fullscreen view on click
 document.addEventListener('DOMContentLoaded', function() {
+    // Array of image filenames for the beaches
     const images = [
         'AnneSourcedArgent.jpg',   // Image for Whitehaven Beach
         'GraceBay.jpg',          // Image for Grace Bay
@@ -61,38 +63,48 @@ document.addEventListener('DOMContentLoaded', function() {
         'PinkSandsBeach.jpg'     // Image for Pink Sands Beach
     ];
 
+    // Select all list items in the second section containing the beach names
     const listItems = document.querySelectorAll('section:nth-of-type(2) ul li');
-    
+
+    // Add images and click event to each list item
     listItems.forEach((li, index) => {
         if (images[index]) {
+            // Create an image element and set its source
             const img = document.createElement('img');
             img.src = images[index];
             img.alt = `Image of ${li.querySelector('h3').textContent}`;
             li.insertBefore(img, li.firstChild);
         }
 
+        // Add click event listener to each list item
         li.addEventListener('click', function() {
             showFullscreenOverlay(li, images[index]);
         });
     });
 
+    // Function to show fullscreen overlay with beach details
     function showFullscreenOverlay(li, imageSrc) {
+        // Create a fullscreen overlay div
         const overlay = document.createElement('div');
         overlay.classList.add('fullscreen-overlay');
 
+        // Add the image to the overlay
         const img = document.createElement('img');
         img.src = imageSrc;
         img.alt = li.querySelector('h3').textContent;
         overlay.appendChild(img);
 
+        // Add the beach title to the overlay
         const title = document.createElement('h3');
         title.textContent = li.querySelector('h3').textContent;
         overlay.appendChild(title);
 
+        // Add the beach description to the overlay
         const description = document.createElement('p');
         description.textContent = li.querySelector('p').textContent;
         overlay.appendChild(description);
 
+        // Add a close button to the overlay
         const closeButton = document.createElement('button');
         closeButton.textContent = 'Close';
         closeButton.classList.add('close-button');
@@ -101,6 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         overlay.appendChild(closeButton);
 
+        // Append the overlay to the body
         document.body.appendChild(overlay);
     }
 });
+
+// Thanks to chatGPT for the comments lol
