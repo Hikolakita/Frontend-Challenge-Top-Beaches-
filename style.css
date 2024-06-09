@@ -14,7 +14,7 @@ html, body {
 
 /* Body background image */
 body {
-    background: url("../Images/MainBackground.png") center/cover no-repeat rgb(29, 22, 30);
+    background: url("MainBackground.png") center/cover no-repeat rgb(29, 22, 30);
 }
 
 /* Text selection color */
