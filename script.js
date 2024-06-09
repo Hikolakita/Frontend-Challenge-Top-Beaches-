@@ -49,16 +49,16 @@ document.addEventListener("DOMContentLoaded", createExploreButton);
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        '../Images/AnneSourcedArgent.jpg',   // Image for Whitehaven Beach
-        '../Images/GraceBay.jpg',          // Image for Grace Bay
-        '../Images/BaiaDoSancho.jpg',      // Image for Baia do Sancho
-        '../Images/NavagioBeach.jpg',      // Image for Navagio Beach
-        '../Images/PlayaParaiso.jpeg',     // Image for Playa Paraiso
-        '../Images/AnneSourcedArgent.jpg', // Image for Anse Source d'Argent
-        '../Images/SevenMileBeach.jpg',    // Image for Seven Mile Beach
-        '../Images/BoraBora.jpg',          // Image for Bora Bora
-        '../Images/LanikaiBeach.jpg',      // Image for Lanikai Beach
-        '../Images/PinkSandsBeach.jpg'     // Image for Pink Sands Beach
+        'AnneSourcedArgent.jpg',   // Image for Whitehaven Beach
+        'GraceBay.jpg',          // Image for Grace Bay
+        'BaiaDoSancho.jpg',      // Image for Baia do Sancho
+        'NavagioBeach.jpg',      // Image for Navagio Beach
+        'PlayaParaiso.jpeg',     // Image for Playa Paraiso
+        'AnneSourcedArgent.jpg', // Image for Anse Source d'Argent
+        'SevenMileBeach.jpg',    // Image for Seven Mile Beach
+        'BoraBora.jpg',          // Image for Bora Bora
+        'LanikaiBeach.jpg',      // Image for Lanikai Beach
+        'PinkSandsBeach.jpg'     // Image for Pink Sands Beach
     ];
 
     const listItems = document.querySelectorAll('section:nth-of-type(2) ul li');
