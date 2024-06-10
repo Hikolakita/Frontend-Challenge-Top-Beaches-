@@ -359,17 +359,60 @@ li:hover::after {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+
     header h1 {
-        font-size: 50px;
-        margin-top: 300px;
+        font-size: 35px;
     }
 
     main section:nth-of-type(2) {
-        margin-top: 770px;
+        margin-top: 470px;
+    }
+
+    header h1 {
+        margin-top: 300px;
+    }
+
+    main section:first-of-type h2{
+        text-align: center;
+        font-size: 20px;
+        margin-left: 40%;
+
+    }
+
+    main section:first-of-type p {
+        width:280px;
+        text-align: center;
+        margin-left: 43%;
+        margin-right: 50%;
+    }
+
+
+
+}
+
+@media (max-width:1360px) {
+    main section:nth-of-type(2) {
+        margin-top: 700px;
     }
 }
-@media (max-width:1180px) {
-    main section:nth-of-type(2) {
-        margin-top: 570px;
+
+
+@media (max-width:375px) {
+
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+        margin-left:1px;
     }
+
+    main section:first-of-type p {
+
+        font-size: 15px;
+    }
+
+    main section:nth-of-type(2) ul li {
+        width:350px;
+        margin-left: 20px;
+    }
+
 }
