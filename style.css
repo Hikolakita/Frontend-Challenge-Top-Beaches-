@@ -311,7 +311,7 @@ li:hover::after {
     border-radius: 10px;
     border: 2px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-top: 30px;
+    margin-top: 5%;
 }
 
 /* Fullscreen h3 styling */
@@ -366,5 +366,10 @@ li:hover::after {
 
     main section:nth-of-type(2) {
         margin-top: 770px;
+    }
+}
+@media (max-width:1180px) {
+    main section:nth-of-type(2) {
+        margin-top: 570px;
     }
 }
