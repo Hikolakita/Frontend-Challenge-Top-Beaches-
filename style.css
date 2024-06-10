@@ -84,7 +84,7 @@ main section:first-of-type h2:hover {
 /* Paragraph styling */
 main section p {
     background-color: transparent;
-    font-size: 19px;
+    font-size: 29px;
     color: rgb(249, 236, 255);
     font-family: "Freeman";
     letter-spacing: 0.06em;
