@@ -392,7 +392,7 @@ li:hover::after {
 
 @media (max-width:1380px) {
     main section:nth-of-type(2) {
-        margin-top: 700px;
+        margin-top: 600px;
     }
 }
 
