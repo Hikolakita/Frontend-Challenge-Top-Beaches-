@@ -1,6 +1,8 @@
 // Function to create the "Explore the Beaches" button
 function createExploreButton() {
     // Create a new button element
+    if (window.innerWidth > 385) {
+        
     var button = document.createElement("button");
 
     // Set the button's text content
@@ -42,6 +44,8 @@ function createExploreButton() {
 
     // Append the button to the section
     section.appendChild(button);
+
+    }
 }
 
 // Call the function to create the button when the DOM is fully loaded
