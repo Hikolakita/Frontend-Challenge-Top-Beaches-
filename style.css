@@ -306,7 +306,7 @@ li:hover::after {
 /* Fullscreen image styling */
 .fullscreen-overlay img {
     max-width: 90%;
-    max-height: 70%;
+    max-height: 60%;
     margin-bottom: 20px;
     border-radius: 10px;
     border: 2px solid white;
